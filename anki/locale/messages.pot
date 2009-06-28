@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-26 09:47+0900\n"
+"POT-Creation-Date: 2009-06-28 20:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: sound.py:248
+#: sound.py:250
 msgid ""
 "\n"
 "Error processing audio.\n"
@@ -33,11 +33,6 @@ msgid ""
 "\n"
 "The current importer only supports a single active card template. Please disable\n"
 "all but one card template."
-msgstr ""
-
-#: stats.py:343 stats.py:347 stats.py:351
-#, python-format
-msgid "%(partOf)d of %(totalSum)d"
 msgstr ""
 
 #: stats.py:271 stats.py:278 stats.py:301
@@ -139,12 +134,17 @@ msgstr[1] ""
 msgid "'%(row)s' had %(num1)d fields, expected %(num2)d"
 msgstr ""
 
-#: stats.py:380 stats.py:383 stats.py:386 stats.py:389
+#: stats.py:361 stats.py:365 stats.py:369
+#, python-format
+msgid "(%(partOf)d of %(totalSum)d)"
+msgstr ""
+
+#: stats.py:403 stats.py:406 stats.py:416 stats.py:419
 #, python-format
 msgid "<b>%(a)d</b> (<b>%(b)s</b>/day)"
 msgstr ""
 
-#: stats.py:377
+#: stats.py:400
 #, python-format
 msgid "<b>%(a)s</b>/day, <b>%(b)s</b>/mon"
 msgstr ""
@@ -181,16 +181,12 @@ msgid ""
 "</table>"
 msgstr ""
 
+#: stats.py:353
+msgid "Active cards:"
+msgstr ""
+
 #: stats.py:264
 msgid "Added"
-msgstr ""
-
-#: stats.py:383
-msgid "Added last month"
-msgstr ""
-
-#: stats.py:380
-msgid "Added last week"
 msgstr ""
 
 #: exporting.py:55 exporting.py:235 importing/__init__.py:264
@@ -201,32 +197,40 @@ msgstr ""
 msgid "Answer Card"
 msgstr ""
 
+#: stats.py:395
+msgid "Average Added"
+msgstr ""
+
+#: stats.py:410
+msgid "Average New Seen"
+msgstr ""
+
+#: stats.py:378
+msgid "Average Reviews"
+msgstr ""
+
 #: stats.py:288
 msgid "Average Time"
 msgstr ""
 
-#: stats.py:367
-msgid "Average reps"
-msgstr ""
-
-#: stats.py:361
-msgid "Averages"
-msgstr ""
-
-#: stats.py:377
-msgid "Avg. added"
+#: stats.py:343
+msgid "Average interval: "
 msgstr ""
 
 #: stdmodels.py:31
 msgid "Basic"
 msgstr ""
 
-#: stats.py:292
-msgid "Card Template"
+#: stats.py:334
+msgid "Card Maturity"
 msgstr ""
 
-#: stats.py:334
-msgid "Card counts"
+#: stats.py:352
+msgid "Card State"
+msgstr ""
+
+#: stats.py:292
+msgid "Card Template"
 msgstr ""
 
 #: exporting.py:236
@@ -253,11 +257,11 @@ msgstr ""
 msgid "Check Media DB"
 msgstr ""
 
-#: deck.py:2297
+#: deck.py:2299
 msgid "Checking integrity..."
 msgstr ""
 
-#: deck.py:2307
+#: deck.py:2309
 msgid "Checking schema..."
 msgstr ""
 
@@ -265,8 +269,8 @@ msgstr ""
 msgid "Checksum files..."
 msgstr ""
 
-#: stats.py:341
-msgid "Correct answers"
+#: stats.py:359
+msgid "Correct Answers"
 msgstr ""
 
 #: importing/csvfile.py:83
@@ -277,11 +281,11 @@ msgstr ""
 msgid "CueCard Deck (*.wcu)"
 msgstr ""
 
-#: deck.py:3364
+#: deck.py:3366
 msgid "Custom failed cards handling"
 msgstr ""
 
-#: deck.py:2300
+#: deck.py:2302
 msgid ""
 "Database file is damaged.\n"
 "Please restore from automatic backup (see FAQ)."
@@ -296,11 +300,15 @@ msgstr ""
 msgid "Deck created: <b>%s</b> ago<br>"
 msgstr ""
 
-#: deck.py:2692
+#: stats.py:383 stats.py:400
+msgid "Deck life"
+msgstr ""
+
+#: deck.py:2694
 msgid "Deck missing core table"
 msgstr ""
 
-#: deck.py:2310
+#: deck.py:2312
 msgid "Deck was missing a model"
 msgstr ""
 
@@ -312,49 +320,49 @@ msgstr ""
 msgid "Delete unused files..."
 msgstr ""
 
-#: deck.py:2345
+#: deck.py:2347
 #, python-format
 msgid "Deleted %d card with missing fact"
 msgid_plural "Deleted %d cards with missing fact"
 msgstr[0] ""
 msgstr[1] ""
 
-#: deck.py:2357
+#: deck.py:2359
 #, python-format
 msgid "Deleted %d card with no card template"
 msgid_plural "Deleted %d cards with no card template"
 msgstr[0] ""
 msgstr[1] ""
 
-#: deck.py:2372
+#: deck.py:2374
 #, python-format
 msgid "Deleted %d dangling field"
 msgid_plural "Deleted %d dangling fields"
 msgstr[0] ""
 msgstr[1] ""
 
-#: deck.py:2334
+#: deck.py:2336
 #, python-format
 msgid "Deleted %d fact with missing fields"
 msgid_plural "Deleted %d facts with missing fields"
 msgstr[0] ""
 msgstr[1] ""
 
-#: deck.py:2363
+#: deck.py:2365
 #, python-format
 msgid "Deleted %d fact with no cards"
 msgid_plural "Deleted %d facts with no cards"
 msgstr[0] ""
 msgstr[1] ""
 
-#: deck.py:2324
+#: deck.py:2326
 #, python-format
 msgid "Deleted %d field with missing field model"
 msgid_plural "Deleted %d fields with missing field model"
 msgstr[0] ""
 msgstr[1] ""
 
-#: deck.py:2376
+#: deck.py:2378
 msgid "Deleted: "
 msgstr ""
 
@@ -387,7 +395,7 @@ msgstr ""
 msgid "Facts in tab-separated text file (*.txt)"
 msgstr ""
 
-#: deck.py:2742
+#: deck.py:2744
 msgid "File is in use by another process"
 msgstr ""
 
@@ -395,23 +403,35 @@ msgstr ""
 msgid "First Review"
 msgstr ""
 
-#: stats.py:389
-msgid "First last month"
-msgstr ""
-
-#: stats.py:386
-msgid "First last week"
-msgstr ""
-
-#: stats.py:350
+#: stats.py:368
 msgid "First-seen cards:"
 msgstr ""
 
-#: importing/__init__.py:57 importing/anki10.py:30
+#: importing/anki10.py:30 importing/__init__.py:57
 msgid "Importing..."
 msgstr ""
 
-#: stats.py:275 stats.py:366
+#: stats.py:391 stats.py:406 stats.py:419
+msgid "In last month"
+msgstr ""
+
+#: stats.py:389 stats.py:403 stats.py:416
+msgid "In last week"
+msgstr ""
+
+#: stats.py:387
+msgid "In next month"
+msgstr ""
+
+#: stats.py:385
+msgid "In next week"
+msgstr ""
+
+#: stats.py:355
+msgid "Inactive cards:"
+msgstr ""
+
+#: stats.py:275
 msgid "Interval"
 msgstr ""
 
@@ -439,7 +459,7 @@ msgstr ""
 msgid "Mature cards: <!--card count-->"
 msgstr ""
 
-#: stats.py:342
+#: stats.py:360
 msgid "Mature cards: <!--correct answers-->"
 msgstr ""
 
@@ -476,55 +496,39 @@ msgstr ""
 msgid "Please add some cards first."
 msgstr ""
 
-#: deck.py:2554
+#: deck.py:2556
 msgid "Processing..."
 msgstr ""
 
-#: deck.py:2394
+#: deck.py:2396
 msgid "Rebuilding QA cache..."
 msgstr ""
 
-#: deck.py:2410
+#: deck.py:2412
 msgid "Rebuilding counts..."
 msgstr ""
 
-#: deck.py:2388
+#: deck.py:2390
 msgid "Rebuilding tag cache..."
 msgstr ""
 
-#: deck.py:2408
+#: deck.py:2410
 msgid "Rebuilding types..."
 msgstr ""
 
-#: stats.py:375
-msgid "Reps last month"
-msgstr ""
-
-#: stats.py:373
-msgid "Reps last week"
-msgstr ""
-
-#: stats.py:371
-msgid "Reps next month"
-msgstr ""
-
-#: stats.py:369
-msgid "Reps next week"
-msgstr ""
-
-#: deck.py:3351
+#: deck.py:3353
 msgid "Review cards from largest interval"
 msgstr ""
 
-#: deck.py:3352
+#: deck.py:3354
 msgid "Review cards from smallest interval"
 msgstr ""
 
-#: deck.py:3353
+#: deck.py:3355
 msgid "Review cards in order due"
 msgstr ""
 
-#: deck.py:3354
+#: deck.py:3356
 msgid "Review cards in random order"
 msgstr ""
 
@@ -540,48 +544,52 @@ msgstr ""
 msgid "Scan fields..."
 msgstr ""
 
-#: deck.py:3360
+#: deck.py:3362
 msgid "Show failed cards at end"
 msgstr ""
 
-#: deck.py:3361
+#: deck.py:3363
 msgid "Show failed cards in 10 minutes"
 msgstr ""
 
-#: deck.py:3363
+#: deck.py:3365
 msgid "Show failed cards in 3 days"
 msgstr ""
 
-#: deck.py:3362
+#: deck.py:3364
 msgid "Show failed cards in 8 hours"
 msgstr ""
 
-#: deck.py:3359
+#: deck.py:3361
 msgid "Show failed cards soon"
 msgstr ""
 
-#: deck.py:3345
+#: deck.py:3347
 msgid "Show new cards after all other cards"
 msgstr ""
 
-#: deck.py:3346
+#: deck.py:3348
 msgid "Show new cards before reviews"
 msgstr ""
 
-#: deck.py:3338
+#: deck.py:3340
 msgid "Show new cards in order added"
 msgstr ""
 
-#: deck.py:3337
+#: deck.py:3339
 msgid "Show new cards in random order"
 msgstr ""
 
-#: deck.py:3339
+#: deck.py:3341
 msgid "Show new cards in reverse order added"
 msgstr ""
 
-#: deck.py:3344
+#: deck.py:3346
 msgid "Spread new cards out through reviews"
+msgstr ""
+
+#: stats.py:357
+msgid "Suspended cards:"
 msgstr ""
 
 #: exporting.py:164 exporting.py:196
@@ -592,7 +600,7 @@ msgstr ""
 msgid "Text separated by tabs or semicolons (*)"
 msgstr ""
 
-#: deck.py:2316
+#: deck.py:2318
 msgid "The current model didn't exist"
 msgstr ""
 
@@ -671,11 +679,11 @@ msgstr ""
 msgid "Update tags..."
 msgstr ""
 
-#: deck.py:2391
+#: deck.py:2393
 msgid "Updating priorities..."
 msgstr ""
 
-#: deck.py:2908
+#: deck.py:2910
 msgid "Upgrading Deck..."
 msgstr ""
 
@@ -687,7 +695,7 @@ msgstr ""
 msgid "Young cards: <!--card count-->"
 msgstr ""
 
-#: stats.py:346
+#: stats.py:364
 msgid "Young cards: <!--correct answers-->"
 msgstr ""
 
@@ -699,11 +707,11 @@ msgstr ""
 msgid "all"
 msgstr ""
 
-#: stats.py:368 stats.py:370 stats.py:372 stats.py:374 stats.py:376
+#: stats.py:384 stats.py:386 stats.py:388 stats.py:390 stats.py:392
 msgid "cards/day"
 msgstr ""
 
-#: stats.py:366
+#: stats.py:343
 msgid "days"
 msgstr ""
 

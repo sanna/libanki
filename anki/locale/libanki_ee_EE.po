@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libanki_ee_EE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-26 09:47+0900\n"
+"POT-Creation-Date: 2009-06-28 20:07+0200\n"
 "PO-Revision-Date: 2009-03-17 18:43+0200\n"
 "Last-Translator: Meelis Vasser <meelis.vasser@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: sound.py:248
+#: sound.py:250
 msgid ""
 "\n"
 "Error processing audio.\n"
@@ -40,11 +40,6 @@ msgid ""
 "\n"
 "The current importer only supports a single active card template. Please disable\n"
 "all but one card template."
-msgstr ""
-
-#: stats.py:343 stats.py:347 stats.py:351
-#, python-format
-msgid "%(partOf)d of %(totalSum)d"
 msgstr ""
 
 #: stats.py:271 stats.py:278 stats.py:301
@@ -146,12 +141,17 @@ msgstr[1] ""
 msgid "'%(row)s' had %(num1)d fields, expected %(num2)d"
 msgstr ""
 
-#: stats.py:380 stats.py:383 stats.py:386 stats.py:389
+#: stats.py:361 stats.py:365 stats.py:369
+#, python-format
+msgid "(%(partOf)d of %(totalSum)d)"
+msgstr ""
+
+#: stats.py:403 stats.py:406 stats.py:416 stats.py:419
 #, fuzzy, python-format
 msgid "<b>%(a)d</b> (<b>%(b)s</b>/day)"
 msgstr "<b>%(a)d</b> (<b>%(b)0.1f</b>/päeva)"
 
-#: stats.py:377
+#: stats.py:400
 #, fuzzy, python-format
 msgid "<b>%(a)s</b>/day, <b>%(b)s</b>/mon"
 msgstr "<b>%(a)d</b>/päeva, <b>%(b)d</b>/kuus"
@@ -205,17 +205,13 @@ msgstr ""
 "%(media)s\n"
 "</table>"
 
+#: stats.py:353
+msgid "Active cards:"
+msgstr ""
+
 #: stats.py:264
 msgid "Added"
 msgstr "Lisatud"
-
-#: stats.py:383
-msgid "Added last month"
-msgstr "Eelmisel kuu lisatud"
-
-#: stats.py:380
-msgid "Added last week"
-msgstr "Eelmisel nädalal lisatud "
 
 #: exporting.py:55 exporting.py:235 importing/__init__.py:264
 #, fuzzy
@@ -226,35 +222,46 @@ msgstr "Anki kaardipakk (*.anki)"
 msgid "Answer Card"
 msgstr "Vasta"
 
+#: stats.py:395
+#, fuzzy
+msgid "Average Added"
+msgstr "Keskmine aeg"
+
+#: stats.py:410
+#, fuzzy
+msgid "Average New Seen"
+msgstr "Keskmine aeg"
+
+#: stats.py:378
+#, fuzzy
+msgid "Average Reviews"
+msgstr "Keskmine aeg"
+
 #: stats.py:288
 msgid "Average Time"
 msgstr "Keskmine aeg"
 
-#: stats.py:367
-msgid "Average reps"
-msgstr "Keskmiselt kordusi"
-
-#: stats.py:361
+#: stats.py:343
 #, fuzzy
-msgid "Averages"
-msgstr "Keskmiselt kordusi"
-
-#: stats.py:377
-msgid "Avg. added"
-msgstr "Keskmiselt lisatud"
+msgid "Average interval: "
+msgstr "Keskmine aeg"
 
 #: stdmodels.py:31
 msgid "Basic"
 msgstr "Põhimudel"
 
+#: stats.py:334
+msgid "Card Maturity"
+msgstr ""
+
+#: stats.py:352
+#, fuzzy
+msgid "Card State"
+msgstr "Kaardi mall"
+
 #: stats.py:292
 msgid "Card Template"
 msgstr "Kaardi mall"
-
-#: stats.py:334
-#, fuzzy
-msgid "Card counts"
-msgstr "<b>Kaardi andmed</b><br>"
 
 #: exporting.py:236
 msgid "Cards in tab-separated text file (*.txt)"
@@ -280,11 +287,11 @@ msgstr "Muudan väljasid..."
 msgid "Check Media DB"
 msgstr "Kontrolli meedia andmebaasi"
 
-#: deck.py:2297
+#: deck.py:2299
 msgid "Checking integrity..."
 msgstr "Kontrollin terviklikkust"
 
-#: deck.py:2307
+#: deck.py:2309
 msgid "Checking schema..."
 msgstr "Kontrollin skeemi..."
 
@@ -292,9 +299,9 @@ msgstr "Kontrollin skeemi..."
 msgid "Checksum files..."
 msgstr "Kontrollin faile..."
 
-#: stats.py:341
+#: stats.py:359
 #, fuzzy
-msgid "Correct answers"
+msgid "Correct Answers"
 msgstr "<b>Õigeid vastuseid</b><br>"
 
 #: importing/csvfile.py:83
@@ -305,11 +312,11 @@ msgstr ""
 msgid "CueCard Deck (*.wcu)"
 msgstr ""
 
-#: deck.py:3364
+#: deck.py:3366
 msgid "Custom failed cards handling"
 msgstr "Kohanda ununendud kaartide töötlust"
 
-#: deck.py:2300
+#: deck.py:2302
 #, fuzzy
 msgid ""
 "Database file is damaged.\n"
@@ -325,12 +332,16 @@ msgstr "Kaardipaki statistika"
 msgid "Deck created: <b>%s</b> ago<br>"
 msgstr "Kaardipakk loodud: <b>%s</b> tagasi<br>"
 
-#: deck.py:2692
+#: stats.py:383 stats.py:400
+msgid "Deck life"
+msgstr ""
+
+#: deck.py:2694
 #, fuzzy
 msgid "Deck missing core table"
 msgstr "Kaardipakil puudus mudel"
 
-#: deck.py:2310
+#: deck.py:2312
 msgid "Deck was missing a model"
 msgstr "Kaardipakil puudus mudel"
 
@@ -342,49 +353,49 @@ msgstr "Kustuta iganenenud viited..."
 msgid "Delete unused files..."
 msgstr "Kustuta mittekasutatavad failid..."
 
-#: deck.py:2345
+#: deck.py:2347
 #, fuzzy, python-format
 msgid "Deleted %d card with missing fact"
 msgid_plural "Deleted %d cards with missing fact"
 msgstr[0] "%d puuduva faktita kaarti kustutatud."
 msgstr[1] "%d puuduva faktita kaarti kustutatud."
 
-#: deck.py:2357
+#: deck.py:2359
 #, fuzzy, python-format
 msgid "Deleted %d card with no card template"
 msgid_plural "Deleted %d cards with no card template"
 msgstr[0] "%d kaardimallita kaarti kustutatud"
 msgstr[1] "%d kaardimallita kaarti kustutatud"
 
-#: deck.py:2372
+#: deck.py:2374
 #, fuzzy, python-format
 msgid "Deleted %d dangling field"
 msgid_plural "Deleted %d dangling fields"
 msgstr[0] "%d ripnevat välja kustutatud"
 msgstr[1] "%d ripnevat välja kustutatud"
 
-#: deck.py:2334
+#: deck.py:2336
 #, fuzzy, python-format
 msgid "Deleted %d fact with missing fields"
 msgid_plural "Deleted %d facts with missing fields"
 msgstr[0] "%d puuduva väljaga fakti kustutatud"
 msgstr[1] "%d puuduva väljaga fakti kustutatud"
 
-#: deck.py:2363
+#: deck.py:2365
 #, fuzzy, python-format
 msgid "Deleted %d fact with no cards"
 msgid_plural "Deleted %d facts with no cards"
 msgstr[0] "%d kaardita fakti kustutatud"
 msgstr[1] "%d kaardita fakti kustutatud"
 
-#: deck.py:2324
+#: deck.py:2326
 #, fuzzy, python-format
 msgid "Deleted %d field with missing field model"
 msgid_plural "Deleted %d fields with missing field model"
 msgstr[0] "%d puuduva väljaga fakti kustutatud"
 msgstr[1] "%d puuduva väljaga fakti kustutatud"
 
-#: deck.py:2376
+#: deck.py:2378
 msgid "Deleted: "
 msgstr ""
 
@@ -420,7 +431,7 @@ msgstr "Ekspordin..."
 msgid "Facts in tab-separated text file (*.txt)"
 msgstr "Faktid tabulaatoriga eraldatud tekstifailis (*.txt)"
 
-#: deck.py:2742
+#: deck.py:2744
 msgid "File is in use by another process"
 msgstr "Fail on kasutusel teise protsessi käes"
 
@@ -428,24 +439,40 @@ msgstr "Fail on kasutusel teise protsessi käes"
 msgid "First Review"
 msgstr "Esimene kordamine"
 
-#: stats.py:389
-msgid "First last month"
-msgstr "Esimene eelmisel kuus"
-
-#: stats.py:386
-msgid "First last week"
-msgstr "Esimene eelmisel nädalal"
-
-#: stats.py:350
+#: stats.py:368
 msgid "First-seen cards:"
 msgstr ""
 
-#: importing/__init__.py:57 importing/anki10.py:30
+#: importing/anki10.py:30 importing/__init__.py:57
 #, fuzzy
 msgid "Importing..."
 msgstr "Ekspordin..."
 
-#: stats.py:275 stats.py:366
+#: stats.py:391 stats.py:406 stats.py:419
+#, fuzzy
+msgid "In last month"
+msgstr "Kordamisi eelmisel kuul"
+
+#: stats.py:389 stats.py:403 stats.py:416
+#, fuzzy
+msgid "In last week"
+msgstr "Kordamisi eelmisel nädalal"
+
+#: stats.py:387
+#, fuzzy
+msgid "In next month"
+msgstr "Kordamisi järgmisel kuul"
+
+#: stats.py:385
+#, fuzzy
+msgid "In next week"
+msgstr "Kordamisi järgmisel nädalal"
+
+#: stats.py:355
+msgid "Inactive cards:"
+msgstr ""
+
+#: stats.py:275
 msgid "Interval"
 msgstr "Vahekaugus"
 
@@ -474,7 +501,7 @@ msgstr "Vana"
 msgid "Mature cards: <!--card count-->"
 msgstr "Vana"
 
-#: stats.py:342
+#: stats.py:360
 #, fuzzy
 msgid "Mature cards: <!--correct answers-->"
 msgstr "Vana"
@@ -513,55 +540,39 @@ msgstr "Ühtegi kaarti ei ole tähtaegumas."
 msgid "Please add some cards first."
 msgstr "Palun lisa esmalt kaarte.<p/>"
 
-#: deck.py:2554
+#: deck.py:2556
 msgid "Processing..."
 msgstr "Töötlen..."
 
-#: deck.py:2394
+#: deck.py:2396
 msgid "Rebuilding QA cache..."
 msgstr "Ehitan uuesti QA vahemälu..."
 
-#: deck.py:2410
+#: deck.py:2412
 msgid "Rebuilding counts..."
 msgstr "Ehitan uuesti statistikat..."
 
-#: deck.py:2388
+#: deck.py:2390
 msgid "Rebuilding tag cache..."
 msgstr "Ehitan uuesti siltide vahemälu..."
 
-#: deck.py:2408
+#: deck.py:2410
 msgid "Rebuilding types..."
 msgstr "Ehitan uuesti tüüpe..."
 
-#: stats.py:375
-msgid "Reps last month"
-msgstr "Kordamisi eelmisel kuul"
-
-#: stats.py:373
-msgid "Reps last week"
-msgstr "Kordamisi eelmisel nädalal"
-
-#: stats.py:371
-msgid "Reps next month"
-msgstr "Kordamisi järgmisel kuul"
-
-#: stats.py:369
-msgid "Reps next week"
-msgstr "Kordamisi järgmisel nädalal"
-
-#: deck.py:3351
+#: deck.py:3353
 msgid "Review cards from largest interval"
 msgstr "Korda suurima vahekaugusega kaarte"
 
-#: deck.py:3352
+#: deck.py:3354
 msgid "Review cards from smallest interval"
 msgstr "Korda vähima vahekaugusega kaarte"
 
-#: deck.py:3353
+#: deck.py:3355
 msgid "Review cards in order due"
 msgstr "Korda kaarte tähtaegumise järjekorras"
 
-#: deck.py:3354
+#: deck.py:3356
 msgid "Review cards in random order"
 msgstr "Korda kaarte suvalises järjekorras"
 
@@ -577,49 +588,54 @@ msgstr "Parem"
 msgid "Scan fields..."
 msgstr "Uuri väljasid..."
 
-#: deck.py:3360
+#: deck.py:3362
 msgid "Show failed cards at end"
 msgstr "Näita ununenud kaarte lõpus"
 
-#: deck.py:3361
+#: deck.py:3363
 msgid "Show failed cards in 10 minutes"
 msgstr "Näita ununenud kaarte 10 minuti pärast"
 
-#: deck.py:3363
+#: deck.py:3365
 msgid "Show failed cards in 3 days"
 msgstr "Näita ununenud kaarte 3 päeva pärast"
 
-#: deck.py:3362
+#: deck.py:3364
 msgid "Show failed cards in 8 hours"
 msgstr "Näita ununenud kaarte 8 tunni pärast"
 
-#: deck.py:3359
+#: deck.py:3361
 msgid "Show failed cards soon"
 msgstr "Näita ununenud kaarte varsti"
 
-#: deck.py:3345
+#: deck.py:3347
 msgid "Show new cards after all other cards"
 msgstr "Näita uusi kaarte pärast kõiki teisi kaarte"
 
-#: deck.py:3346
+#: deck.py:3348
 msgid "Show new cards before reviews"
 msgstr "Näita uusi kaarte enne kordamist"
 
-#: deck.py:3338
+#: deck.py:3340
 msgid "Show new cards in order added"
 msgstr "Näita uusi kaarte lisamise järjekorras"
 
-#: deck.py:3337
+#: deck.py:3339
 msgid "Show new cards in random order"
 msgstr "Näita uusi kaarte suvalises järjekorras"
 
-#: deck.py:3339
+#: deck.py:3341
 msgid "Show new cards in reverse order added"
 msgstr "Näita uusi kaarte tagurpidi lisamise järjekorras"
 
-#: deck.py:3344
+#: deck.py:3346
 msgid "Spread new cards out through reviews"
 msgstr "Jaota uued kaardid üle kordamiste laiali"
+
+#: stats.py:357
+#, fuzzy
+msgid "Suspended cards:"
+msgstr "<b>Üks</b> peatatud kaart."
 
 #: exporting.py:164 exporting.py:196
 msgid "Text files (*.txt)"
@@ -629,7 +645,7 @@ msgstr "Tekstifailid (*.txt)"
 msgid "Text separated by tabs or semicolons (*)"
 msgstr ""
 
-#: deck.py:2316
+#: deck.py:2318
 msgid "The current model didn't exist"
 msgstr "Praegune mudel ei olnud olemas"
 
@@ -710,11 +726,11 @@ msgstr ""
 msgid "Update tags..."
 msgstr "Uuenda silte..."
 
-#: deck.py:2391
+#: deck.py:2393
 msgid "Updating priorities..."
 msgstr "Uuendan omadusi..."
 
-#: deck.py:2908
+#: deck.py:2910
 msgid "Upgrading Deck..."
 msgstr "Uuendan kaardipakki..."
 
@@ -727,7 +743,7 @@ msgstr "Noor"
 msgid "Young cards: <!--card count-->"
 msgstr "Vana"
 
-#: stats.py:346
+#: stats.py:364
 msgid "Young cards: <!--correct answers-->"
 msgstr ""
 
@@ -739,11 +755,11 @@ msgstr "[vigane küsimuse või vastuse formaat]"
 msgid "all"
 msgstr ""
 
-#: stats.py:368 stats.py:370 stats.py:372 stats.py:374 stats.py:376
+#: stats.py:384 stats.py:386 stats.py:388 stats.py:390 stats.py:392
 msgid "cards/day"
 msgstr ""
 
-#: stats.py:366
+#: stats.py:343
 #, fuzzy
 msgid "days"
 msgstr "%s päev"
@@ -802,6 +818,12 @@ msgstr "teadmata"
 #~ msgid "<li>%d total unique kanji.</li>"
 #~ msgstr "<li>Kordumatut kanji-t kokku %d.</li>"
 
+#~ msgid "Added last month"
+#~ msgstr "Eelmisel kuu lisatud"
+
+#~ msgid "Added last week"
+#~ msgstr "Eelmisel nädalal lisatud "
+
 #, fuzzy
 #~ msgid "Anki 1.0 deck (*.anki)"
 #~ msgstr "Anki kaardipakk (*.anki)"
@@ -812,8 +834,28 @@ msgstr "teadmata"
 #~ msgid "Anki decks (*.anki)"
 #~ msgstr "Anki kaardipakid (*.anki)"
 
+#~ msgid "Average reps"
+#~ msgstr "Keskmiselt kordusi"
+
+#, fuzzy
+#~ msgid "Averages"
+#~ msgstr "Keskmiselt kordusi"
+
+#~ msgid "Avg. added"
+#~ msgstr "Keskmiselt lisatud"
+
 #~ msgid "Cantonese"
 #~ msgstr "Cantonese"
+
+#, fuzzy
+#~ msgid "Card counts"
+#~ msgstr "<b>Kaardi andmed</b><br>"
+
+#~ msgid "First last month"
+#~ msgstr "Esimene eelmisel kuus"
+
+#~ msgid "First last week"
+#~ msgstr "Esimene eelmisel nädalal"
 
 #~ msgid "First-seen cards: <b>%(gNewYes%)0.1f%%</b> (<b>%(gNewYes)d</b> of <b>%(gNewTotal)d</b>)<br><br>"
 #~ msgstr "Esmakordselt nähtud kaardid: <b>%(gNewYes%)0.1f%%</b> (<b>%(gNewYes)d</b>/<b>%(gNewTotal)d</b>)<br><br>"

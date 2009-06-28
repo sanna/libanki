@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libanki_de_DE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-26 09:47+0900\n"
+"POT-Creation-Date: 2009-06-28 20:07+0200\n"
 "PO-Revision-Date: 2009-06-19 19:18+0100\n"
 "Last-Translator: Michael Jürges <michael.juerges@googlemail.com>\n"
 "Language-Team: Deutsch <de@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: sound.py:248
+#: sound.py:250
 msgid ""
 "\n"
 "Error processing audio.\n"
@@ -44,11 +44,6 @@ msgstr ""
 "\n"
 "Der Import unterstützt nur eine aktive Kartenvorlage. Bitte deaktiviere\n"
 "alle Kartenvorlagen bis auf eine."
-
-#: stats.py:343 stats.py:347 stats.py:351
-#, python-format
-msgid "%(partOf)d of %(totalSum)d"
-msgstr "%(partOf)d von %(totalSum)d"
 
 #: stats.py:271 stats.py:278 stats.py:301
 #, python-format
@@ -149,12 +144,17 @@ msgstr[1] "%s Jahre"
 msgid "'%(row)s' had %(num1)d fields, expected %(num2)d"
 msgstr "Zeile %(line)d hat %(num1)d Felder, erwarte %(num2)d"
 
-#: stats.py:380 stats.py:383 stats.py:386 stats.py:389
+#: stats.py:361 stats.py:365 stats.py:369
+#, fuzzy, python-format
+msgid "(%(partOf)d of %(totalSum)d)"
+msgstr "%(partOf)d von %(totalSum)d"
+
+#: stats.py:403 stats.py:406 stats.py:416 stats.py:419
 #, python-format
 msgid "<b>%(a)d</b> (<b>%(b)s</b>/day)"
 msgstr "<b>%(a)d</b> (<b>%(b)s</b>/Tag)"
 
-#: stats.py:377
+#: stats.py:400
 #, python-format
 msgid "<b>%(a)s</b>/day, <b>%(b)s</b>/mon"
 msgstr "<b>%(a)s</b>/Tag, <b>%(b)s</b>/Monat"
@@ -209,17 +209,14 @@ msgstr ""
 "<tr><td>Statistiken</td><td>%(ls)s</td><td>%(rs)s</td></tr>\n"
 "</table>"
 
+#: stats.py:353
+#, fuzzy
+msgid "Active cards:"
+msgstr "Nicht gesehene Karten:"
+
 #: stats.py:264
 msgid "Added"
 msgstr "Hinzugefügt"
-
-#: stats.py:383
-msgid "Added last month"
-msgstr "Letzten Monat hinzugefügt"
-
-#: stats.py:380
-msgid "Added last week"
-msgstr "Letzte Woche hinzugefügt"
 
 #: exporting.py:55 exporting.py:235 importing/__init__.py:264
 msgid "Anki Deck (*.anki)"
@@ -229,33 +226,46 @@ msgstr "Anki Stapeldatei (*.anki)"
 msgid "Answer Card"
 msgstr "Antwortkarte"
 
+#: stats.py:395
+#, fuzzy
+msgid "Average Added"
+msgstr "Durchschnittliche Zeit"
+
+#: stats.py:410
+#, fuzzy
+msgid "Average New Seen"
+msgstr "Durchschnittliche Zeit"
+
+#: stats.py:378
+#, fuzzy
+msgid "Average Reviews"
+msgstr "Durchschnittliche Zeit"
+
 #: stats.py:288
 msgid "Average Time"
 msgstr "Durchschnittliche Zeit"
 
-#: stats.py:367
-msgid "Average reps"
-msgstr "Durchschnittliche Wiederholungen"
-
-#: stats.py:361
-msgid "Averages"
-msgstr "Durchschnittliche Wiederholungen"
-
-#: stats.py:377
-msgid "Avg. added"
-msgstr "Durchschnittlich hinzugefügt"
+#: stats.py:343
+#, fuzzy
+msgid "Average interval: "
+msgstr "Durchschnittliche Zeit"
 
 #: stdmodels.py:31
 msgid "Basic"
 msgstr "Einfach"
 
+#: stats.py:334
+msgid "Card Maturity"
+msgstr ""
+
+#: stats.py:352
+#, fuzzy
+msgid "Card State"
+msgstr "Kartenvorlage"
+
 #: stats.py:292
 msgid "Card Template"
 msgstr "Kartenvorlage"
-
-#: stats.py:334
-msgid "Card counts"
-msgstr "Anzahl Karten"
 
 #: exporting.py:236
 msgid "Cards in tab-separated text file (*.txt)"
@@ -281,11 +291,11 @@ msgstr "Verändere Felder..."
 msgid "Check Media DB"
 msgstr "Medien-Datenbank prüfen"
 
-#: deck.py:2297
+#: deck.py:2299
 msgid "Checking integrity..."
 msgstr "Prüfe Integrität..."
 
-#: deck.py:2307
+#: deck.py:2309
 msgid "Checking schema..."
 msgstr "Prüfe Schema..."
 
@@ -293,8 +303,9 @@ msgstr "Prüfe Schema..."
 msgid "Checksum files..."
 msgstr "Berechne Datei-Prüfsummen..."
 
-#: stats.py:341
-msgid "Correct answers"
+#: stats.py:359
+#, fuzzy
+msgid "Correct Answers"
 msgstr "Richtige Antworten"
 
 #: importing/csvfile.py:83
@@ -305,11 +316,11 @@ msgstr ""
 msgid "CueCard Deck (*.wcu)"
 msgstr "CueCard Stapel (*.wcu)"
 
-#: deck.py:3364
+#: deck.py:3366
 msgid "Custom failed cards handling"
 msgstr "Angepasste Behandlung fehlgeschlagener Karten"
 
-#: deck.py:2300
+#: deck.py:2302
 msgid ""
 "Database file is damaged.\n"
 "Please restore from automatic backup (see FAQ)."
@@ -324,11 +335,15 @@ msgstr "Stapelstatistik"
 msgid "Deck created: <b>%s</b> ago<br>"
 msgstr "Alter des Stapels: <b>%s</b><br>"
 
-#: deck.py:2692
+#: stats.py:383 stats.py:400
+msgid "Deck life"
+msgstr ""
+
+#: deck.py:2694
 msgid "Deck missing core table"
 msgstr "Eine wichtige Datenbanktabelle fehlt"
 
-#: deck.py:2310
+#: deck.py:2312
 msgid "Deck was missing a model"
 msgstr "Dem Stapel fehlt ein Modell"
 
@@ -340,49 +355,49 @@ msgstr "Lösche ungültige Referenzen..."
 msgid "Delete unused files..."
 msgstr "Lösche ungenutzte Dateien..."
 
-#: deck.py:2345
+#: deck.py:2347
 #, python-format
 msgid "Deleted %d card with missing fact"
 msgid_plural "Deleted %d cards with missing fact"
 msgstr[0] "%d Karte mit fehlendem Faktum gelöscht"
 msgstr[1] "%d Karten mit fehlendem Faktum gelöscht"
 
-#: deck.py:2357
+#: deck.py:2359
 #, python-format
 msgid "Deleted %d card with no card template"
 msgid_plural "Deleted %d cards with no card template"
 msgstr[0] "%d Karte ohne Kartenvorlage gelöscht"
 msgstr[1] "%d Karten ohne Kartenvorlage gelöscht"
 
-#: deck.py:2372
+#: deck.py:2374
 #, python-format
 msgid "Deleted %d dangling field"
 msgid_plural "Deleted %d dangling fields"
 msgstr[0] "%d ungenutztes Feld gelöscht"
 msgstr[1] "%d ungenutzte Felder gelöscht"
 
-#: deck.py:2334
+#: deck.py:2336
 #, python-format
 msgid "Deleted %d fact with missing fields"
 msgid_plural "Deleted %d facts with missing fields"
 msgstr[0] "%d Fakt mit fehlenden Feldern gelöscht"
 msgstr[1] "%d Fakten mit fehlenden Feldern gelöscht"
 
-#: deck.py:2363
+#: deck.py:2365
 #, python-format
 msgid "Deleted %d fact with no cards"
 msgid_plural "Deleted %d facts with no cards"
 msgstr[0] "%d Fakt ohne Karten gelöscht"
 msgstr[1] "%d Fakten ohne Karten gelöscht"
 
-#: deck.py:2324
+#: deck.py:2326
 #, python-format
 msgid "Deleted %d field with missing field model"
 msgid_plural "Deleted %d fields with missing field model"
 msgstr[0] "%d Feld mit fehlenden Stapelmodell gelöscht"
 msgstr[1] "%d Felder mit fehlenden Stapelmodell gelöscht"
 
-#: deck.py:2376
+#: deck.py:2378
 msgid "Deleted: "
 msgstr "Gelöscht: "
 
@@ -418,7 +433,7 @@ msgstr "Exportiere..."
 msgid "Facts in tab-separated text file (*.txt)"
 msgstr "Fakten in Tabulator-getrennter Textdatei (*.txt)"
 
-#: deck.py:2742
+#: deck.py:2744
 msgid "File is in use by another process"
 msgstr "Die Datei wird von einem anderen Prozeß benutzt"
 
@@ -426,23 +441,40 @@ msgstr "Die Datei wird von einem anderen Prozeß benutzt"
 msgid "First Review"
 msgstr "Erstmals wiederholt"
 
-#: stats.py:389
-msgid "First last month"
-msgstr "Erstmalig letzten Monat"
-
-#: stats.py:386
-msgid "First last week"
-msgstr "Erstmalig letzte Woche"
-
-#: stats.py:350
+#: stats.py:368
 msgid "First-seen cards:"
 msgstr "Erstmalig gesehene Karten:"
 
-#: importing/__init__.py:57 importing/anki10.py:30
+#: importing/anki10.py:30 importing/__init__.py:57
 msgid "Importing..."
 msgstr "Importiere..."
 
-#: stats.py:275 stats.py:366
+#: stats.py:391 stats.py:406 stats.py:419
+#, fuzzy
+msgid "In last month"
+msgstr "Wiederholungen letzten Monat"
+
+#: stats.py:389 stats.py:403 stats.py:416
+#, fuzzy
+msgid "In last week"
+msgstr "Wiederholungen letzte Woche"
+
+#: stats.py:387
+#, fuzzy
+msgid "In next month"
+msgstr "Wiederholungen nächsten Monat"
+
+#: stats.py:385
+#, fuzzy
+msgid "In next week"
+msgstr "Wiederholungen nächste Woche"
+
+#: stats.py:355
+#, fuzzy
+msgid "Inactive cards:"
+msgstr "Nicht gesehene Karten:"
+
+#: stats.py:275
 msgid "Interval"
 msgstr "Intervall"
 
@@ -470,7 +502,7 @@ msgstr "Alt"
 msgid "Mature cards: <!--card count-->"
 msgstr "Alte Karten:"
 
-#: stats.py:342
+#: stats.py:360
 msgid "Mature cards: <!--correct answers-->"
 msgstr "Alte Karten:"
 
@@ -507,55 +539,39 @@ msgstr "Keine Karten sind fällig."
 msgid "Please add some cards first."
 msgstr "Bitte füge zuerst einige Karten hinzu."
 
-#: deck.py:2554
+#: deck.py:2556
 msgid "Processing..."
 msgstr "Verarbeite..."
 
-#: deck.py:2394
+#: deck.py:2396
 msgid "Rebuilding QA cache..."
 msgstr "Cache neu anlegen..."
 
-#: deck.py:2410
+#: deck.py:2412
 msgid "Rebuilding counts..."
 msgstr "Zähler neu anlegen..."
 
-#: deck.py:2388
+#: deck.py:2390
 msgid "Rebuilding tag cache..."
 msgstr "Cache für Tags neu anlegen..."
 
-#: deck.py:2408
+#: deck.py:2410
 msgid "Rebuilding types..."
 msgstr "Typen neu anlegen..."
 
-#: stats.py:375
-msgid "Reps last month"
-msgstr "Wiederholungen letzten Monat"
-
-#: stats.py:373
-msgid "Reps last week"
-msgstr "Wiederholungen letzte Woche"
-
-#: stats.py:371
-msgid "Reps next month"
-msgstr "Wiederholungen nächsten Monat"
-
-#: stats.py:369
-msgid "Reps next week"
-msgstr "Wiederholungen nächste Woche"
-
-#: deck.py:3351
+#: deck.py:3353
 msgid "Review cards from largest interval"
 msgstr "Älteste Karten zuerst wiederholen"
 
-#: deck.py:3352
+#: deck.py:3354
 msgid "Review cards from smallest interval"
 msgstr "Jüngste Karten zuerst wiederholen"
 
-#: deck.py:3353
+#: deck.py:3355
 msgid "Review cards in order due"
 msgstr "geordnet nach Fälligkeitsdatum wiederholen"
 
-#: deck.py:3354
+#: deck.py:3356
 msgid "Review cards in random order"
 msgstr "in zufälliger Reihenfolge wiederholen"
 
@@ -571,49 +587,54 @@ msgstr "Rechts"
 msgid "Scan fields..."
 msgstr "Prüfe Felder..."
 
-#: deck.py:3360
+#: deck.py:3362
 msgid "Show failed cards at end"
 msgstr "Zeige fehlgeschlagene Karten am Ende"
 
-#: deck.py:3361
+#: deck.py:3363
 msgid "Show failed cards in 10 minutes"
 msgstr "Zeige fehlgeschlagene Karten nach 10 Minuten"
 
-#: deck.py:3363
+#: deck.py:3365
 msgid "Show failed cards in 3 days"
 msgstr "Zeige fehlgeschlagene Karten nach 3 Tagen"
 
-#: deck.py:3362
+#: deck.py:3364
 msgid "Show failed cards in 8 hours"
 msgstr "Zeige fehlgeschlagene Karten nach 8 Stunden"
 
-#: deck.py:3359
+#: deck.py:3361
 msgid "Show failed cards soon"
 msgstr "Zeige fehlgeschlagene Karten bald an"
 
-#: deck.py:3345
+#: deck.py:3347
 msgid "Show new cards after all other cards"
 msgstr "Zeige neue Karten nach allen anderen Karten"
 
-#: deck.py:3346
+#: deck.py:3348
 msgid "Show new cards before reviews"
 msgstr "Zeige neue Karten vor den Wiederholungen "
 
-#: deck.py:3338
+#: deck.py:3340
 msgid "Show new cards in order added"
 msgstr "Zeige neue Karten in der Reihenfolge des Hinzufügens"
 
-#: deck.py:3337
+#: deck.py:3339
 msgid "Show new cards in random order"
 msgstr "Zeige neue Karten in zufälliger Reihenfolge"
 
-#: deck.py:3339
+#: deck.py:3341
 msgid "Show new cards in reverse order added"
 msgstr "Zeige neue Karten in umgekehrter Reihenfolge des Hinzufügens"
 
-#: deck.py:3344
+#: deck.py:3346
 msgid "Spread new cards out through reviews"
 msgstr "Verteile neue Karten über die Wiederholungen"
+
+#: stats.py:357
+#, fuzzy
+msgid "Suspended cards:"
+msgstr "Nicht gesehene Karten:"
 
 #: exporting.py:164 exporting.py:196
 msgid "Text files (*.txt)"
@@ -623,7 +644,7 @@ msgstr "Textdateien (*.txt)"
 msgid "Text separated by tabs or semicolons (*)"
 msgstr "Text getrennt durch Tabulatoren oder Semikolons (*)"
 
-#: deck.py:2316
+#: deck.py:2318
 msgid "The current model didn't exist"
 msgstr "Das aktuelle Modell war nicht vorhanden"
 
@@ -702,11 +723,11 @@ msgstr "Nicht gesehene Karten:"
 msgid "Update tags..."
 msgstr "Aktualisiere Tags..."
 
-#: deck.py:2391
+#: deck.py:2393
 msgid "Updating priorities..."
 msgstr "Aktualisiere Prioritäten..."
 
-#: deck.py:2908
+#: deck.py:2910
 msgid "Upgrading Deck..."
 msgstr "Aktualisiere Stapel..."
 
@@ -718,7 +739,7 @@ msgstr "Jung"
 msgid "Young cards: <!--card count-->"
 msgstr "Junge Karten: "
 
-#: stats.py:346
+#: stats.py:364
 msgid "Young cards: <!--correct answers-->"
 msgstr "Junge Karten: "
 
@@ -730,11 +751,11 @@ msgstr "[ungültiges Frage/Antwort-Format]"
 msgid "all"
 msgstr "Alle"
 
-#: stats.py:368 stats.py:370 stats.py:372 stats.py:374 stats.py:376
+#: stats.py:384 stats.py:386 stats.py:388 stats.py:390 stats.py:392
 msgid "cards/day"
 msgstr "Karten/Tag"
 
-#: stats.py:366
+#: stats.py:343
 msgid "days"
 msgstr "Tage"
 
@@ -768,17 +789,41 @@ msgstr "unbekannt"
 #~ msgid "<li>%d total unique kanji.</li>"
 #~ msgstr "<li>insgesamt %d verschiedene Kanji.</li>"
 
+#~ msgid "Added last month"
+#~ msgstr "Letzten Monat hinzugefügt"
+
+#~ msgid "Added last week"
+#~ msgstr "Letzte Woche hinzugefügt"
+
 #~ msgid "Anki deck (*.anki)"
 #~ msgstr "Anki Stapeldatei (*.anki)"
 
 #~ msgid "Anki decks (*.anki)"
 #~ msgstr "Anki Stapeldateien (*.anki)"
 
+#~ msgid "Average reps"
+#~ msgstr "Durchschnittliche Wiederholungen"
+
+#~ msgid "Averages"
+#~ msgstr "Durchschnittliche Wiederholungen"
+
+#~ msgid "Avg. added"
+#~ msgstr "Durchschnittlich hinzugefügt"
+
 #~ msgid "Cantonese"
 #~ msgstr "Kantonesisch"
 
+#~ msgid "Card counts"
+#~ msgstr "Anzahl Karten"
+
 #~ msgid "Couldn't find pattern. The file should be a series of lines separated by tabs or semicolons."
 #~ msgstr "Kann kein Muster finden. Die Datei sollte aus einer Folge von durch Tabulatoren oder Semikolons getrennten Zeilen bestehen."
+
+#~ msgid "First last month"
+#~ msgstr "Erstmalig letzten Monat"
+
+#~ msgid "First last week"
+#~ msgstr "Erstmalig letzte Woche"
 
 #~ msgid "Japanese"
 #~ msgstr "Japanisch"
